@@ -1,0 +1,35 @@
+.cms-title{
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1a72de;
+}
+
+.cms-textarea{
+    width: 60%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+.edit-button{
+    background-color: #1a72de;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-button{
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
