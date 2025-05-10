@@ -4,10 +4,11 @@ import Header from "../Header";
 import Footer from "../Footer";
 
 const Home = () => {
-    const [heading, setHeading] = useState('');  // Initialize heading as empty string
+    const defaultHeading = "Hyper boost your Revenue Management, Marketing and Commercial Functions with Business Ready AI";
+    const [heading, setHeading] = useState('');  // Initially empty
 
     useEffect(() => {
-        const apiurl = "http://localhost:8080/headings"; // API to fetch heading
+        const apiurl = "http://localhost:8080/headings";
         const fetchData = async () => {
             try {
                 const response = await fetch(apiurl);
@@ -15,9 +16,6 @@ const Home = () => {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                console.log(data);  // Log the response for debugging
-
-                // Check if heading exists in the response and update state
                 if (data.heading) {
                     setHeading(data.heading);
                 }
@@ -27,7 +25,24 @@ const Home = () => {
         };
 
         fetchData();
-    }, []);  // Empty dependency array ensures this runs only once after initial render
+    }, []);
+
+    const renderHighlightedHeading = () => {
+        const fullHeading = heading || defaultHeading;
+        const words = fullHeading.split(" ");
+
+        const totalWords = words.length;
+        const third = Math.floor(totalWords / 3);
+        const start = words.slice(0, third).join(" ");
+        const middle = words.slice(third, third * 2).join(" ");
+        const end = words.slice(third * 2).join(" ");
+
+        return (
+            <h1 className="heading">
+                {start} <span className="highlight-orange">{middle}</span> {end}
+            </h1>
+        );
+    };
 
     return (
         <>
@@ -37,7 +52,7 @@ const Home = () => {
                     <img src="https://i.postimg.cc/Bv17b3GZ/Frame-26086340-1.png" alt="Logo1" className="logo1" />
                 </div>
                 <div className="home-text">
-                    <h1 className="heading">{heading || "Hyper boost your Revenue Management, Marketing and Commercial Functions with Business Ready AI"}</h1>  {/* Show a loading message until heading is fetched */}
+                    {renderHighlightedHeading()}
                     <p className="description">
                         Powerful AI solutions that go beyond mere data sorting and <br />
                         exploration. Use our array of AI enabled solutions that understand <br />
@@ -55,3 +70,4 @@ const Home = () => {
 };
 
 export default Home;
+
