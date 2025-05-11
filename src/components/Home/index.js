@@ -48,9 +48,7 @@ const Home = () => {
         <>
             <Header />
             <div className="home-container">
-                <div>
                     <img src="https://i.postimg.cc/Bv17b3GZ/Frame-26086340-1.png" alt="Logo1" className="logo1" />
-                </div>
                 <div className="home-text">
                     {renderHighlightedHeading()}
                     <p className="description">
@@ -60,9 +58,7 @@ const Home = () => {
                     </p>
                     <button className="home-button">Get Started</button>
                 </div>
-                <div>
                     <img src="https://i.postimg.cc/V6QGbhYq/Asset-5-1.png" alt="Logo2" className="logo2" />
-                </div>
             </div>
             <Footer />
         </>

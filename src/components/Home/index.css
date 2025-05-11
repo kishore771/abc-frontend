@@ -2,22 +2,18 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 100vh;
     background-image: linear-gradient(to right, #ffffff, #fff7ec);
 }
 
 .logo1{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 156px;
-    height: 714px;
+
+    width: 150px;
+    height: 578px;
+    padding-top: 0px;
+    top: 562.8px;
+    left: 129px;
 }
 .logo2{
-    display: flex; 
-    flex-direction: row;
-    justify-content: end;
-    align-items: end;
     width: 562px;
     height: 728px;
 }
@@ -25,15 +21,15 @@
 .home-text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: start;
+    text-align: left;
     padding: 30px;
     margin-right: 500px;
+    width: 150%;
  
 }
 
 .heading{
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
     color: #000000;
 }
