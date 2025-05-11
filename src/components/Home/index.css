@@ -13,22 +13,22 @@
     left: 129px;
 }
 .logo2{
-    width: 562px;
+    width: 462px;
     height: 728px;
 }
 
 .home-text{
     display: flex;
     flex-direction: column;
-    text-align: left;
-    padding: 30px;
-    margin-right: 500px;
+    justify-content: start;
+    text-align: start;
+    padding-left: 40px;
     width: 150%;
  
 }
 
 .heading{
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 700;
     color: #000000;
 }
@@ -45,7 +45,7 @@
     font-weight: 600;
     color: rgb(0, 0, 0);
     padding: 10px 20px;
-    width: 40%;
+    width: 20%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
