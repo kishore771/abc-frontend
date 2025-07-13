@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import './index.css';
+import { useNavigate } from "react-router-dom";
 
 const CMS = () => {
     const [content, setContent] = useState('');
     const [isEditable, setIsEditable] = useState(false);
+    const navigate = useNavigate();
 
     // Function to handle POST request
     const postData = async () => {
@@ -24,6 +26,8 @@ const CMS = () => {
                 const data = await response.text(); // Get the response as text
                 console.log(data);  // Log the response
                 alert('Content saved successfully!');
+                navigate('/');
+
             } else {
                 alert('Failed to save content. Please try again.');
             }
@@ -31,6 +35,7 @@ const CMS = () => {
             console.error('Error:', error);
             alert('Failed to save content. Please try again.');
         }
+
     };
 
     return (
