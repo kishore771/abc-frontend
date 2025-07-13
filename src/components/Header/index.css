@@ -18,3 +18,12 @@
     padding: 30px;
     padding-left: 0px;
 }
+
+.cms-link {
+  color: #0b0b0b;
+  text-decoration: none;
+}
+
+.cms-link:hover {
+  text-decoration: underline;
+}
